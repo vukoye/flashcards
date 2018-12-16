@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         brightness: Brightness.light,
-        primarySwatch: Colors.white,
+        primaryColor: Colors.white,
         scaffoldBackgroundColor: Colors.white
       ),
       home: const MyHomePage(title: 'Flashcards'),
