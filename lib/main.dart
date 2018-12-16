@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+void main() {
+  runApp(MyApp());
 
-void main() => runApp(MyApp());
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.white,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarDividerColor: Colors.black,
+      systemNavigationBarIconBrightness: Brightness.dark
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flashcards',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -18,9 +29,11 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primarySwatch: Colors.white,
+        scaffoldBackgroundColor: Colors.white
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flashcards'),
     );
   }
 }
@@ -70,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        elevation: 0,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
